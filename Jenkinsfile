@@ -11,5 +11,10 @@ agent any
                 sh 'mvn test'
             }
         }
+        stage('Deploy'){
+            steps{
+                sh 'java -jar my-app-1.0-SNAPSHOT.jar'
+            }
+        }
     }
 }
